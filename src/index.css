@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing : border-box;
+}
+
+* {
+    margin  : 0;
+    padding : 0;
+}
+
+
+:where(html, body, #root) {
+    min-block-size : 100vh;
+    display        : grid;
+}
+
+body {
+    text-rendering           : optimizeSpeed;
+    -webkit-font-smoothing   : antialiased;
+    font-synthesis           : none;
+    -moz-osx-font-smoothing  : grayscale;
+    -webkit-text-size-adjust : 100%;
+    font-family              : Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight              : 400;
+    line-height              : 1.5;
+    color                    : #ffffff;
+    background-color         : #2b2d30;
+}
+
+input, button, textarea, select {
+    font : inherit;
+}
+
+.containers {
+    display               : grid;
+    grid-template-columns : repeat(2, 1fr);
+    block-size            : 100%;
+}
+
+.container {
+    block-size : 100%;
+    line-break : anywhere;
+}
+
+.container__header {
+    padding       : 0.5rem 1rem;
+    border-bottom : 1px solid #363537;
+    border-right  : 1px solid #363537;
+}
+
+.container__title {
+    color       : #cccccc;
+    font-weight : 500;
+    font-size   : 1.125rem;
+}
+
+.container__main {
+    block-size   : 100%;
+    border-right : 1px solid #363537;
+}
+
+textarea {
+    padding          : 0.5rem 1rem;
+    font-family: 'Fira Mono', monospace;
+    font-size        : 0.8125rem;
+    font-weight      : 400;
+    resize           : none;
+    color            : inherit;
+    background-color : #232427;
+    block-size       : 100%;
+    inline-size      : 100%;
+    outline          : none;
+    border           : none;
+    border-left      : 1px solid #363537;
+}
+
+.editor {
+    display               : grid;
+    grid-template-columns : auto 1fr;
+}
+
+.editor__lines {
+    padding          : 0.5rem 1rem;
+    font-size        : 0.8125rem;
+    display          : grid;
+    align-content    : start;
+    justify-items    : end;
+    block-size       : 100%;
+    color            : #9d999f;
+    background-color : #232427;
+    inline-size      : 100%;
+    width            : 7ch;
+}
+
+.editor__lines span {
+    font-family: 'Fira Mono', monospace;
+    font-size   : 0.825rem;
+}
+
+.preview {
+    padding          : 0.5rem 1rem;
+    background-color : #232427;
+}
+
+pre {
+    padding          : 1em;
+    border-radius    : 0.25rem;
+    background-color : #35363a;
+}
+
+pre + pre {
+    margin-top : 1rem;
+}
+
+img {
+    max-inline-size : 100%;
+    max-block-size  : 100%;
+}
+
+ul,ol {
+    padding-inline-start : 1.5rem;
+}
